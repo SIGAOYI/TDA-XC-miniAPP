@@ -1,0 +1,61 @@
+<!-- driver-history-order.wxml-->
+<view class="container driver-history-order">
+  <view class="wrap">
+    <view class="list">
+      <view class="list-item" wx:for="{{list}}" wx:key="*this">
+        <view class="item-header">
+          <view class="order-time">下单时间:{{ item.ct }}</view>
+          <view class="order-status">
+            {{ status[item.status] }}
+          </view>
+        </view>
+        <view class="item-info">
+          <view class="info-item">
+            <view class="point-box">
+              <view class="point point-blue"></view>
+            </view>
+            <view class="text">
+              {{ item.plate }}
+            </view>
+          </view>
+          <view class="info-item">
+            <view class="point-box">
+              <view class="point point-yellow"></view>
+            </view>
+            <view class="text">
+              {{ item.addr }}  {{ item.remark }}
+            </view>
+          </view>
+          <view class="info-item">
+            <view class="point-box">
+              <view class="point point-red"></view>
+            </view>
+            <view class="text">
+              {{ item.st }} - {{ item.et }}
+            </view>
+          </view>
+        </view>
+        <view class="item-footer">
+          <view class="eval" wx:if="{{ item.status >= 4 }}">
+            <view class="eval-item" hidden="{{ item.score !== 0 }}">
+                <view class="text cai">待评价</view>
+            </view>
+            <view class="eval-item" hidden="{{ item.score !== 2 }}">
+              <view class="text zan">满意</view>
+              <view class="img">
+                <image src="../../lib/img/icon/icon-zan.png" mode="aspectFit"></image>
+              </view>
+            </view>
+            <view class="eval-item" hidden="{{ item.score !== 1 }}">
+              <view class="text cai">不满意</view>
+              <view class="img">
+                <image src="../../lib/img/icon/icon-cai.png" mode="aspectFit"></image>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="{{ (list === null) ? 'bg-icon' : 'bg-icon hide' }}"></view>
+  </view>
+</view>

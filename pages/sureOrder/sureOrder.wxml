@@ -1,0 +1,81 @@
+<!--sureOrder.wxml-->
+<view class="container sureOrder">
+  <view class="wrap">
+    <text class="title">请确认您的洗车信息</text>
+    <view class="info-box">
+      <view class="info-box-item last-one">
+        <view class="name">费用(元):</view>
+        <view class="info-item">
+          30 (余额扣:{{ accountPay/100 }}, 在线支付:{{ onlinePay/100 }})
+        </view>
+      </view>
+      <view class="info-box-item last-one">
+        <view class="name">优惠券</view>
+        <view class="info-item coupon " bindtap="bindChooseCoupon" >
+          <!-- <view class="money">-￥<text class="money-text" style="font-size: 40rpx;importment;">100</text></view> -->
+          <view class="num"><text class="num-text">{{account.couponNum}}张</text></view>
+          <view class="arrow" ><image class="img-arrow" src="../../lib/img/icon/arrow.png"></image></view>
+        </view>
+      </view>
+    </view>
+    <view class="info-box">
+      <view class="info-box-item addr-item">
+        <view class="name">地址</view>
+        <view class="info-item addr">
+          {{ info.addr.addr }}
+        </view>
+      </view>
+      <view class="info-box-item last-one">
+        <view class="name">地址备注</view>
+        <view class="info-item remark">
+          {{ info.addr.remark }}
+        </view>
+      </view>
+    </view>
+    <view class="info-box">
+      <view class="info-box-item last-one">
+        <view class="name">预约时间</view>
+        <view class="info-item strong-text">
+          {{ info.ct.stStr }} - {{ info.ct.etStr }}
+        </view>
+      </view>
+    </view>
+    <view class="info-box">
+      <view class="info-box-item">
+        <view class="name">车牌号</view>
+        <view class="info-item">
+          {{ info.car.plate }}
+        </view>
+      </view>
+      <view class="info-box-item">
+        <view class="name">车辆颜色</view>
+        <view class="info-item">
+          {{ info.car.color }}
+        </view>
+      </view>
+      <view class="info-box-item">
+        <view class="name">姓名</view>
+        <view class="info-item allrow">
+          <view>{{ info.car.linkman }}</view>
+          <view  class="sex-info"><text class="sex-text" >先生</text></view>
+        </view>
+      </view>
+      <view class="info-box-item">
+        <view class="name">电话</view>
+        <view class="info-item  strong-text">
+          {{ info.car.phone }}
+        </view>
+      </view>
+    </view>
+    <!-- <view class="notice-text">
+      <text>*服务不含沥青,柏油,水泥等美容类业务,请知悉*</text>
+    </view>  -->
+    <!-- <view class="notice-text">
+      <text>余额扣款:30元, 支付扣款:30, 支付后余额：100</text>
+    </view>  -->
+    <view class="btn-wrap">
+      <button class="confirm button" bindtap="pay">微信支付</button>
+    </view>
+  </view>
+</view>
+

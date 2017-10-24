@@ -1,0 +1,179 @@
+/* couponlist.wxss */
+
+.coupon-list .wrap {
+  padding-top: 40rpx;
+  align-items: center;
+  align-content: center;
+}
+
+.coupon-list .wrap .list-item {
+  display:flex;
+  flex-direction: row;
+  height: 80rpx;
+  width: 90%;
+  /*border-radius:4rpx;*/
+  margin-left: 5%;
+  background-color: white;
+  /*background-color: lightgreen;*/
+  /*box-shadow: 0rpx 2rpx 1rpx 3rpx #dfdfdf;*/
+}
+
+.coupon-list .wrap .list-item .button-item {
+  line-height: 80rpx;
+  margin-left: 60%;
+}
+
+.coupon-list .wrap .list-item .button-item .my-button{
+  /*margin-left: 10%;*/
+  line-height: 80rpx;
+  padding-left: 10rpx;
+  /*width: 34rpx;*/
+  /*height: 30rpx;*/
+  border: 0rpx;
+}
+
+.coupon-list .wrap .list-item .button-item .my-button .imgs{
+  margin-left: 35%;
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.coupon-list .wrap .list-item .button-item .button-img{
+  width: 40rpx;
+  height: 40rpx;
+}
+.coupon-list .wrap .list-item .button-item .button-img .imgs{
+  width: 40rpx;
+  height: 40rpx;
+  margin: 23rpx;
+
+}
+
+.coupon-list .wrap .list-item .stauts {
+  line-height: 80rpx;
+/*  background-color: white;*/
+}
+
+.coupon-list .wrap .list-item .stauts .stauts-text {
+
+  margin-left: 16rpx;
+  font-size: 30rpx;
+  /*font-weight: bold;*/
+  line-height: 80rpx;
+  color: #B0BEC5;
+}
+
+.coupon-list .icon-item {
+  height: 50rpx;
+  width: 80%;
+  margin-left:10%;
+  margin-top: 35rpx;
+  /*background-color: red;*/
+}
+
+.coupon-list .icon-item .icon-info {
+  line-height: 50rpx;
+  margin-left: 75%;
+}
+
+.coupon-list .icon-item .icon-infos {
+  line-height: 50rpx;
+}
+
+.coupon-list .icon-item .icon {
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-top: 10rpx;
+}
+
+.coupon-list .icon-item .icon-text {
+  font-size: 23rpx;
+  color: #B0BEC5;
+  line-height: 50rpx;
+}
+
+/*优惠券*/
+.coupon-list .coupon {
+  position: relative;
+  margin-left: 5%;
+  margin-top: 25rpx;
+  height: 250rpx;
+  width: 90%;
+  border-radius:10rpx;
+  /*background-image: url('../../lib/img/icon/coupon.png');*/
+/*  border-top: 5rpx dotted #B0BEC5;
+
+  border-top:50prx dashed red;
+  border-bottom:20rpx solid #FF8C19;
+  box-shadow: 0rpx 2rpx 1rpx 3rpx #dfdfdf;*/
+  background-color: white;
+}
+
+.coupon-list .coupon .coupon-img {
+  float: left;
+  position: absolute;
+  height: 250rpx;
+  width: 100%;
+}
+
+.coupon-list .coupon .coupon-name {
+  color: #FF8C19;
+  float: left;
+  position: absolute;
+  margin: 20rpx 20rpx;
+}
+
+/*优惠券金额*/
+.coupon-list .coupon .coupon-icon {
+  width: 190rpx;
+  font-size: 40rpx;
+  color: #FF8C19;
+  /*float: right;*/
+  text-align-last: right;
+  position: absolute;
+  margin-top: 10rpx;
+  margin-left:70%;
+}
+
+.coupon-list .coupon .coupon-money {
+  font-size: 75rpx;
+  color: #FF8C19;
+  margin-top: 24rpx;
+  /*margin-right: 56rpx;*/
+  padding-right: 20rpx;
+}
+
+.coupon-list .coupon .coupon-time {
+  font-size: 22rpx;
+  color: #FF8C19;
+  float: left;
+  position: absolute;
+  margin-top: 75rpx;
+  margin-left: 4%;
+}
+
+.coupon-list .coupon .coupon-limit {
+  font-size: 25rpx;
+  color: #B0BEC5;
+  float: left;
+  position: absolute;
+  margin-top: 200rpx;
+  margin-left: 4%;
+}
+
+.coupon-list .list .bg-view {
+  /*background-color: red;*/
+}
+.coupon-list .list .bg-view .coupon-no{
+  margin: 30%;
+  width: 400rpx;
+  color: #B0BEC5;
+}
+
+.coupon-list .list .bg-view .bg-bg {
+  margin-top: 35%;
+}
+
+.coupon-list .list .bg-view .bg-bg .coupon-img {
+  width: 100%;
+}

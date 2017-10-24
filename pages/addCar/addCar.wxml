@@ -1,0 +1,77 @@
+<!--addCar.wxml-->
+<view class="container add-car">
+  <view class="wrap">
+    <text class="title">新增清洗车辆信息</text>
+    <view class="form-box">
+      <view class="form-box-item">
+        <view class="name">车牌号</view>
+        <view class="input-item">
+          <input placeholder="请输入车牌号" bindblur="bindInfoChange" value="{{addInfo.plate}}" data-type="plate" />
+        </view>
+      </view>
+      <view class="form-box-item">
+        <view class="name">颜色</view>
+        <view class="input-item">
+          <input placeholder="请输入车辆颜色" bindblur="bindInfoChange" value="{{addInfo.color}}" data-type="color" />
+        </view>
+      </view>
+       <view class="form-box-item">
+        <view class="name">姓名</view>
+        <view class="input-item enter-name allrow">
+          <view ><input placeholder="请输入联系人姓名" bindblur="bindInfoChange" value="{{addInfo.linkman}}" data-type="linkman" /></view>
+          <!-- <view class="sex" style="background-color: #FF8C19;"><text class="sex-text">先生</text></view>
+          <view class="sex" style="background-color: #B0BEC5;"><text class="sex-text">女士</text></view> -->
+          <view class="sex" style="background-color: {{ (addInfo.gender === 1) ? '#FF8C19' : '#B0BEC5' }};" data-value="1" bindtap="bindInfoChange" data-type="gender">
+          <text class="sex-text">先生</text></view>
+          <view class="sex" style="background-color: {{ (addInfo.gender === 0) ? '#FF8C19' : '#B0BEC5' }};" data-value="0" bindtap="bindInfoChange" data-type="gender">
+          <text class="sex-text">女士</text></view>
+        </view>
+      </view> 
+       <!-- <view class="form-box-item">
+        <view class="name">姓名</view>
+        <view ><input placeholder="请输入联系人姓名" bindblur="bindInfoChange" value="{{addInfo.linkman}}" data-type="linkman" /></view>
+        <view class="radio-item">
+          <radio-group class="radio-group" bindchange="bindInfoChange" data-type="gender">
+            <label class="radio">
+              <radio value="1" color="#4c4b5c" checked="{{ (addInfo.gender === 1) ? true : false }}" />先生
+            </label>
+            <label class="radio">
+              <radio value="0" color="#4c4b5c" checked="{{ (addInfo.gender === 0) ? true : false }}" />女士
+            </label>
+          </radio-group>
+        </view>
+      </view>  -->
+      <view class="form-box-item last-one">
+        <view class="name">电话</view>
+        <view class="input-item">
+          <input placeholder="请输入该车驾驶员电话" bindblur="bindInfoChange" value="{{addInfo.phone}}" data-type="phone" type="number"/>
+        </view>
+      </view>
+    </view>
+    <view class="add-usual-addr">
+      <view class="item-title" class="redalert">
+        在地图内拖动红点，请尽量精确标示您的车辆位置
+      </view>
+    </view>
+    <view class="form-box">
+      <view class="form-box-item last-one">
+        <view class="name">地址</view>
+        <view class="input-item addr" bindtap="bindAddrChange">
+          {{ (addInfo.usualaddr.addr) ? addInfo.usualaddr.addr : '点击选择位置' }}
+        </view>
+      </view>
+      <view class="form-box-item last-one">
+        <view class="name"></view>
+        <view class="input-item">
+          <input class="" placeholder="车辆如在地库，请在此描述详细位置" bindblur="bindAddrRemark" value="{{addInfo.usualaddr.remark}}" maxlength="30" />
+        </view>
+      </view>
+    </view>
+    <view class="btn-wrap">
+      <button class="confirm button" bindtap="bindSubmitForm">提交车辆信息</button>
+    </view>
+    <view class="btn-wrap" wx:if="{{ edit }}">
+      <button class="cancel button" bindtap="bindDelInfo">删除车辆信息</button>
+    </view>
+  </view>
+</view>

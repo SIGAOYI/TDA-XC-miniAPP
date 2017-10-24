@@ -1,0 +1,63 @@
+<!--chooseTime.wxml-->
+<view class="container chooseTime">
+  <view class="wrap">
+    <view class="choose-time-title">开始洗车的时间</view>
+    <view class="set-date-box">
+      <picker mode="date" bindchange="bindPickerTimeChange" data-change-type="stsd" value="{{ pickerTime.stsd }}">
+        <view class="setdate item-set">
+          <view class="title">设置日期 :</view>
+          <view class="picker">
+            <view class="picker-val">
+              {{ pickerTime.stsd }}
+            </view>
+          </view>
+        </view>
+      </picker>
+      <picker mode="time" bindchange="bindPickerTimeChange" data-change-type="stst" value="{{ pickerTime.stst }}">
+        <view class="setdate item-set">
+          <view class="title">设置时间 :</view>
+          <view class="picker">
+            <view class="picker-val">
+              {{ pickerTime.stst }}
+            </view>
+          </view>
+        </view>
+      </picker>
+    </view>
+    <view class="choose-time-title">完成洗车的时间</view>
+    <view class="set-date-box">
+      <picker mode="date" bindchange="bindPickerTimeChange" data-change-type="etsd" value="{{ pickerTime.etsd }}">
+        <view class="setdate item-set">
+          <view class="title">设置日期 :</view>
+          <view class="picker">
+            <view class="picker-val">
+              {{ pickerTime.etsd }}
+            </view>
+          </view>
+        </view>
+      </picker>
+      <picker mode="time" bindchange="bindPickerTimeChange" data-change-type="etst" value="{{ pickerTime.etst }}">
+        <view class="setdate item-set">
+          <view class="title">设置时间 :</view>
+          <view class="picker">
+            <view class="picker-val">
+              {{ pickerTime.etst }}
+            </view>
+          </view>
+        </view>
+      </picker>
+    </view>
+    <view class="btn-wrap">
+      <button class="confirm button" bindtap="confirmTap">确认预约时间</button>
+      <button class="cancel button" bindtap="cancelTap">取消</button>
+    </view>
+  </view>
+  <view class="icon-item allrow" bindtap="bindRouterTo" data-routername = 'qa'>
+    <view class="icon-info">
+      <icon class="icon" type="info_circle" size="15" color="#B0BEC5"/>
+    </view>
+    <view class="icon-infos">
+      <text class="icon-text">常见问题</text>
+    </view>
+  </view>
+</view>

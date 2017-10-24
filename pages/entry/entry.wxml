@@ -1,0 +1,129 @@
+<view class="container entry">
+  <view class="wrap">
+    <!--侧边栏显示按钮-->
+    <view class="sidebar-btn" catchtap="ctrlSidebarOpen">
+      <view class="head-img">
+        <image mode="aspectFill" src="{{ wxUserInfo.avatarUrl }}" class="img"></image>
+      </view>
+       <view class="userMsg" wx:if="{{ugorder.orderNum}}">您有{{ugorder.orderNum}}个进行中的订单，<text class="link" bindtap="bindRouterTo" data-routername = 'orderList'>点击查看</text> </view>
+    </view>
+    <!--侧边栏显示时蒙版-->
+    <view class="mask" catchtap="ctrlSidebarClose" style="opacity: {{ sidebarCtrl }}; display: {{ sidebarCtrl ? 'block' : 'none' }};"></view>
+    <!--侧边栏-->
+    <view class="sidebar" style="width: {{ sidebarCtrl * 500 + 'rpx' }};">
+      <view class="sidebar-wrap">
+        <view class="head-img">
+          <image mode="aspectFill" src="{{ wxUserInfo.avatarUrl }}" class="img"></image>
+        </view>
+        <view class="nick-name" wx:if="{{ugorder.mobile}}">{{ wxUserInfo.nickName }} | {{ ugorder.mobile }}</view>
+        <view class="nick-name" wx:else>{{ wxUserInfo.nickName }}</view>
+        <view class="sidebar-nav">
+          <view class="item-nav" bindtap="bindRouterTo" data-routername = 'wallet'>
+            <image class="icon" src="../../lib/img/icon/moneybag.png" mode="aspectFill"></image>
+            <text class="text">钱包</text>
+          </view>
+          <view class="item-nav" bindtap="bindRouterTo" data-routername = 'orderList'>
+            <image class="icon" src="../../lib/img/icon/order-on.png" mode="aspectFill"></image>
+            <text class="text">洗车订单</text>
+          </view>
+          <view class="item-nav" bindtap="bindRouterTo" data-routername = 'chooseCar'>
+            <image class="icon" src="../../lib/img/icon/car-new.png" mode="aspectFill" ></image>
+            <text class="text">车辆列表</text>
+          </view>
+          <view class="item-nav" bindtap="bindRouterTo" data-routername = 'shareqr'>
+            <image class="icon" src="../../lib/img/icon/qrcord.png" mode="aspectFill"></image>
+            <text class="text">邀请二维码</text>
+          </view>
+<!--           <view class="item-nav" bindtap="bindRouterTo" data-routername = 'proofPhone'>
+            <image class="icon" src="../../lib/img/icon/icon-phone.png" mode="aspectFill" ></image>
+            <text class="text">绑定手机</text>
+          </view> -->
+          <view class="item-nav" bindtap="bindCallKfPhone">
+            <image class="icon" src="../../lib/img/icon/GroupCopy.png" mode="aspectFill"></image>
+            <text class="text">联系客服</text>
+          </view>
+          <view class="item-nav" bindtap="bindRouterTo" data-routername = 'qa'>
+            <image class="icon" src="../../lib/img/icon/info.png" mode="aspectFill"></image>
+            <text class="text">常见问题</text>
+          </view>
+          <view class="item-nav" wx:if="{{isDriver}}" bindtap="bindRouterTo" data-routername = 'driverIndex'>
+            <image class="icon" src="../../lib/img/icon/car-new.png" mode="aspectFill"></image>
+            <text class="text">司机入口</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="page-title">您好， 您想在哪里洗车?</view>
+    <view class="pri-time">"最快
+      <text class="strong-text">2小时</text>上门"</view>
+    <view class="enter-info">
+      <!-- 上门服务时间 -->
+      <view class="enter-item enter-time" bindtap="chooseTime">
+        <view class="point">
+          <view class="point-item point-blue"></view>
+        </view>
+        <view class="content">
+          <text>
+            <text class="strong-text ">{{ cTime.stStr }}</text>
+            <text class="small"> 至 </text>
+            <text class="strong-text ">{{ cTime.etStr }}</text>
+            <text class="small"> 之间</text>
+          </text>
+        </view>
+      </view>
+      <view class="{{allowBanSubmit ? 'enter-item enter-car havecar' : 'enter-item enter-car nocar'}}" bindtouchstart="bindCarInfoChange">
+        <view class="point">
+          <view class="point-item point-yellow"></view>
+        </view>
+        <view class="content">
+          <view wx:if="{{ allowBanSubmit }}">
+            {{ car.plate }} - {{ car.phone }}
+          </view>
+          <view wx:else>
+            请选择车辆信息
+          </view>
+        </view>
+      </view>
+      <!-- 地址输入框 -->
+      <view class="enter-item enter-addr" bindtap="bindAddrChange">
+        <view class="point">
+          <view class="point-item point-red"></view>
+        </view>
+        <view class="content">
+          <text> {{ addr.addr }}</text>
+        </view>
+      </view>
+      <view class="enter-item enter-addr remark">
+        <view class="point"></view>
+        <view class="content">
+          <input class="remark-input" value="{{ addr.remark }}" placeholder="请输入具体的地址" placeholder-style="color: #999;" maxlength="30" bindinput="bindAddrRemark" disabled="{{ sidebarCtrl }}" />
+        </view>
+      </view>
+      <!-- 价钱 -->
+      <view class="price">
+        <text class="money">
+          <text class="small">仅需</text> 30 <text class="small">元</text>
+        </text>
+      </view>
+    </view>
+    <!-- btn -->
+    <view class="btn-wrap">
+      <button class="{{ allowBanSubmit ? 'confirm button' : 'cancel button' }}" bindtap="bindSubmit">开始洗车</button>
+    </view>
+    <!-- 联系客服 -->
+<!--     <view class="kf">
+      <image style="height: 40rpx;width: 40rpx;vertical-align: middle;"  bindtap="bindCallKfPhone" src="../../lib/img/icon/icon-kf.png"></image>
+      <text style="vertical-align: middle;margin-top:20rpx;  line-height:40px;" bindtap="bindCallKfPhone">  联系客服</text>
+    </view> -->
+
+    <view class="kf">
+      <!-- <view class="kf-img"> -->
+        <image style="height: 35rpx;width: 35rpx;vertical-align: middle;" bindtap="bindCallKfPhone" src="../../lib/img/icon/shape-kf.png"></image>
+      <!-- </view> -->
+      <!-- <view class="kf-call"> -->
+        <text bindtap="bindCallKfPhone" style="font-size: 25rpx; width: 100rpx;">  联系客服</text>
+      <!-- </view> -->
+    </view>
+
+  </view>
+</view>

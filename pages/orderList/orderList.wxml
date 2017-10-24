@@ -1,0 +1,65 @@
+<!--orderList.wxml-->
+<view class="container order-list">
+  <view class="wrap">
+    <view class="list">
+      <view class="list-item" wx:for="{{list}}">
+        <view class="item-header">
+          <view class="order-time">下单时间:{{ item.ct }}</view>
+          <view class="order-status">
+            {{ status[item.status] }}
+          </view>
+        </view>
+        <view class="item-info">
+          <view class="info-item">
+            <view class="point-box">
+              <view class="point point-blue"></view>
+            </view>
+            <view class="text">
+              {{ item.plate }}
+            </view>
+          </view>
+          <view class="info-item">
+            <view class="point-box">
+              <view class="point point-yellow"></view>
+            </view>
+            <view class="text">
+              {{ item.addr.addr }}  {{ item.addr.remark }}
+            </view>
+          </view>
+          <view class="info-item">
+            <view class="point-box">
+              <view class="point point-red"></view>
+            </view>
+            <view class="text">
+              {{ item.st }} - {{ item.et }}
+            </view>
+          </view>
+        </view>
+        <view class="item-footer">
+          <view class="eval" wx:if="{{ item.status >= 4 }}">
+            <view class="btn" hidden="{{ item.score !== 0 }}">
+              <picker bindchange="bindPickerChange" value="{{index}}" range="{{pj}}" data-index="{{ index }}" mode="selector">
+                <view class="picker">
+                  给个评价
+                </view>
+              </picker>
+            </view>
+            <view class="eval-item" hidden="{{ item.score !== 2 }}">
+              <view class="text zan">满意</view>
+              <view class="img">
+                <image src="../../lib/img/icon/icon-zan.png" mode="aspectFit"></image>
+              </view>
+            </view>
+            <view class="eval-item" hidden="{{ item.score !== 1 }}">
+              <view class="text cai">不满意</view>
+              <view class="img">
+                <image src="../../lib/img/icon/icon-cai.png" mode="aspectFit"></image>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="{{ (list === null) ? 'bg-icon' : 'bg-icon hide' }}"></view>
+  </view>
+</view>

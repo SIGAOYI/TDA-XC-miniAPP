@@ -1,0 +1,32 @@
+{
+  "pages": [
+    "pages/entry/entry",
+    "pages/wallet/wallet",
+    "pages/coupon/coupon",
+    "pages/template/template",
+    "pages/chooseCoupon/chooseCoupon",
+    "pages/chooseTime/chooseTime",
+    "pages/chooseCar/chooseCar",
+    "pages/addCar/addCar",
+    "pages/proofPhone/proofPhone",
+    "pages/proofCode/proofCode",
+    "pages/sureOrder/sureOrder",
+    "pages/orderList/orderList",
+    "pages/driverIndex/driverIndex",
+    "pages/snapOrder/snapOrder",
+    "pages/orderDetails/orderDetails",
+    "pages/driverHistoryOrder/driverHistoryOrder",
+    "pages/qa/qa",
+    "pages/putOut/putOut",
+    "pages/voucher/voucher",
+    "pages/shareqr/shareqr"
+  ],
+  "window": {
+    "backgroundColor": "#F3F4F6",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#30313C",
+    "navigationBarTitleText": "TDA",
+    "navigationBarTextStyle": "white"
+  },
+  "debug":true
+}

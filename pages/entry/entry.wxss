@@ -1,0 +1,248 @@
+.entry .wrap {
+  padding-top: 30rpx;
+}
+
+/*蒙版*/
+
+.entry .wrap .mask {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(7, 17, 27, 0.2);
+  z-index: 1;
+  transition: opacity 0.5s cubic-bezier(0.67, 0.18, 0.30, 0.86);
+}
+
+/*侧边栏*/
+
+.entry .wrap .sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  padding-top: 80rpx;
+  /*width: 500rpx;*/
+  background-color: #fff;
+  z-index: 5;
+  overflow: hidden;
+  transition: width 0.5s cubic-bezier(0.67, 0.18, 0.30, 0.86);
+}
+
+.entry .wrap .sidebar .sidebar-wrap {
+  width: 500rpx;
+}
+
+.entry .wrap .sidebar .sidebar-wrap .head-img {
+  margin: 0 auto;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+  overflow: hidden;
+}
+
+.entry .wrap .sidebar .sidebar-wrap .head-img .img {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.entry .wrap .sidebar .sidebar-wrap .nick-name {
+  margin-top: 30rpx;
+  width: 100%;
+  text-align: center;
+  font-size: 26rpx;
+  color: #09090b;
+}
+
+.entry .wrap .sidebar .sidebar-wrap .sidebar-nav {
+  margin-top: 50rpx;
+}
+
+.entry .wrap .sidebar .sidebar-wrap .sidebar-nav .item-nav {
+  position: relative;
+  box-sizing: border-box;
+  padding-left: 25%;
+  margin: 0 auto;
+  width: 80%;
+  height: 90rpx;
+  /*border-bottom: 1px solid #dfdfdf;*/
+  color: #2a2a34;
+}
+
+.entry .wrap .sidebar .sidebar-wrap .sidebar-nav .item-nav .icon {
+  position: absolute;
+  width: 32rpx;
+  height: 32rpx;
+  top: 39rpx;
+  left: 47rpx;
+  margin-right: 30rpx;
+}
+
+.entry .wrap .sidebar .sidebar-wrap .sidebar-nav .text {
+  font-size: 28rpx;
+  line-height: 110rpx;
+}
+
+.entry .sidebar-btn {
+  display: inline-block;
+  padding: 10rpx 10rpx 10rpx 35rpx;
+  height: 80rpx;
+  background-color: #fff;
+  border-radius: 0 50rpx 50rpx 0;
+}
+
+.entry .sidebar-btn .head-img {
+  float: left;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  overflow: hidden;
+}
+
+.entry .sidebar-btn .head-img .img {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.entry .sidebar-btn .userMsg {
+  float: left;
+  padding: 0 20rpx;
+  margin-left: 20rpx;
+  line-height: 80rpx;
+  font-size: 26rpx;
+  color: #858585;
+}
+
+.entry .page-title {
+  line-height: 2;
+  font-size: 48rpx;
+  text-align: center;
+}
+
+.entry .pri-time {
+  line-height: 2;
+  color: #858585;
+  font-size: 34rpx;
+  text-align: center;
+}
+
+.entry .enter-info {
+  box-sizing: border-box;
+  margin-top: 30rpx;
+  padding: 15rpx 30rpx;
+  background-color: #fff;
+  box-shadow: 0rpx 4rpx 6rpx 0rpx #dfdfdf;
+}
+
+.entry .enter-info .enter-item {
+  /*position: relative;*/
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100rpx;
+  font-size: 30rpx;
+  line-height: 100rpx;
+}
+
+.entry .enter-info .enter-item .point {
+  position: relative;
+  width: 30rpx;
+  height: 100rpx;
+}
+
+.entry .enter-info .enter-item .point .point-item {
+  position: absolute;
+  top: 50%;
+  left: 0rpx;
+  margin-top: -8rpx;
+  width: 16rpx;
+  height: 16rpx;
+  border-radius: 8rpx;
+}
+
+.entry .enter-info .enter-item .point .point-blue {
+  background-color: #3dbca3;
+}
+
+.entry .enter-info .enter-item .point .point-red {
+  background-color: #f57271;
+}
+
+.entry .enter-info .enter-item .point .point-yellow {
+  background-color: #f8e81c;
+}
+
+/*.entry .enter-info .lack {
+  color: #ccc !important;
+}
+
+.entry .enter-info .complete {
+  color: #000 !important;
+}*/
+
+.entry .enter-info .enter-item .content {
+  flex: 1;
+  box-sizing: border-box;
+  padding-left: 10rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 1rpx solid #f5f5f5;
+  overflow: hidden;
+}
+
+.entry .enter-info .enter-item .remark-input {
+  box-sizing: border-box;
+  padding-left: 10rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  color: #555;
+}
+
+.entry .enter-info .enter-item .small {
+  font-size: 24rpx;
+}
+
+.entry .enter-info .price {
+  width: 100%;
+  height: 150rpx;
+  text-align: center;
+}
+
+.entry .enter-info .price .money {
+  line-height: 150rpx;
+  font-size: 80rpx;
+}
+
+.entry .enter-info .price .money .small {
+  font-size: 30rpx;
+}
+
+.entry .wrap .btn-wrap button {
+  margin-top: 40rpx;
+  color: #fff;
+}
+
+.entry .wrap .btn-wrap .confirm {
+  background-color: #4c4b5c;
+}
+
+.entry .wrap .btn-wrap .cancel {
+  background-color: #ddd;
+}
+
+.entry .wrap .qa {
+  margin-top: 20rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #aaa;
+}
+
+.kf{
+  margin-top: 5%;
+  height:40rpx;
+  line-height:40rpx;
+  text-align: center;
+  color:#aaa;
+}
+

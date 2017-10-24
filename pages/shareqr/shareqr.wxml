@@ -1,0 +1,5 @@
+<!--shareqr.wxml-->
+<view class="shareqr">
+  <view class="qr-img" style="background-image: url({{imgsrc}})"></view>
+  <button class="load-img-button" size="mini" type="warn" bindtap="bindLoadImgToLocal">点击保存</button>
+</view>

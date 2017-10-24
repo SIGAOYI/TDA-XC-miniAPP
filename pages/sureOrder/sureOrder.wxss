@@ -1,0 +1,163 @@
+/* sureOrder.wxss */
+
+.sureOrder {
+  padding-top: 40rpx;
+}
+
+.sureOrder .wrap {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.sureOrder .title {
+  box-sizing: border-box;
+  display: block;
+  padding: 0 50rpx;
+  width: 100%;
+  line-height: 40rpx;
+  color: #ccc;
+  font-size: 28rpx;
+}
+
+.sureOrder .info-box {
+  width: 100%;
+  padding: 0 20rpx;
+  margin-top: 20rpx;
+  background-color: #fff;
+}
+
+.sureOrder .info-box .info-box-item {
+  display: flex;
+  width: 100%;
+  border-bottom: 1rpx solid #dfdfdf;
+}
+
+.sureOrder .info-box .last-one {
+  border-bottom: none !important;
+}
+
+.sureOrder .info-box .info-box-item .name {
+  box-sizing: border-box;
+  padding-left: 30rpx;
+  width: 160rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+}
+
+.sureOrder .info-box .info-box-item .info-item {
+  flex: 1;
+  box-sizing: border-box;
+  padding: 0 20rpx 0 40rpx;
+  overflow-x: hidden;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+}
+
+/*优惠券*/
+.sureOrder .info-box .info-box-item .coupon{
+  margin-left: 47%;
+  width: 100%;
+  display:flex;
+  flex: 1;
+  flex-direction: row;
+}
+
+.sureOrder .info-box .info-box-item .info-item .money{
+  margin-top: 22rpx;
+  width: 100%;
+  /*flex: 1;*/
+  box-sizing: border-box;
+  color:#FF5035;
+  overflow-x: hidden;
+  line-height: 40rpx;
+  /*background-color: lightgreen;*/
+}
+
+.sureOrder .info-box .info-box-item .info-item .arrow{
+  height: 30rpx;
+  width: 50rpx;
+}
+
+.sureOrder .info-box .info-box-item .info-item .arrow .img-arrow{
+  margin-top: 23rpx;
+  margin-left: 13rpx;
+  height: 33rpx;
+  width: 20rpx;
+}
+
+.sureOrder .info-box .info-box-item .info-item .money .money-text{
+  font-size: 40rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  background-color: red;
+}
+
+.sureOrder .info-box .info-box-item .num{
+  margin-top: 22rpx;
+  height: 30rpx;
+  border-radius:10rpx;
+  width: 80rpx;
+  /*flex: 1;*/
+  box-sizing: border-box;
+  /*padding: 0 20rpx 0 40rpx;*/
+  /*overflow-x: hidden;*/
+  line-height: 30rpx;
+  background-color: #FF5035;
+}
+.sureOrder .info-box .info-box-item .num .num-text{
+  padding-left: 20rpx;
+  line-height:30rpx;
+  text-align:center;
+  font-size: 22rpx;
+  color:white;
+}
+
+/*性别*/
+/*.sureOrder .info-box .info-box-item .allrow{
+  flex: 1;
+  width: 100%;
+  display:flex;
+  flex-direction: row;
+}*/
+.sureOrder .info-box .info-box-item .sex-info{
+  border-radius:5rpx;
+  margin-left: 60%;
+  margin-top: 22rpx;
+  width: 60rpx;
+  height: 38rpx;
+  line-height: 40rpx;
+  background-color: #FF8C19;
+
+}
+.sureOrder .info-box .info-box-item .sex-text{
+  /*line-height: 40rpx;*/
+  color:white;
+  font-size: 23rpx;
+  text-align:center;
+  margin-left: 8rpx;
+}
+
+.sureOrder .info-box .info-box-item .addr {
+  line-height: 60rpx;
+  height: 120rpx;
+}
+
+.sureOrder .info-box .info-box-item .remark {
+  line-height: 60rpx;
+  height: 180rpx;
+}
+
+.sureOrder .btn-wrap {
+  margin-top: 30rpx;
+}
+
+.sureOrder .btn-wrap button {
+  margin-top: 30rpx;
+  color: #fff;
+}
+
+.sureOrder .btn-wrap .confirm {
+  background-color: #4c4b5c;
+}

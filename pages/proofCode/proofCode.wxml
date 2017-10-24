@@ -1,0 +1,18 @@
+<!--proofCode.wxml-->
+<view class="container proof-code">
+  <view class="wrap">
+    <view class="title">请输入验证码</view>
+    <view class="input-wrap">
+      <view class="item-input">
+        <input placeholder="请输入验证码" bindinput="bindInfoChange" value="{{ code }}" type="number"/>
+      </view>
+      <view class="item-btn" bindtap="bindGetCode">
+         <view class="btn" wx:if="{{ getCode }}">获取验证码</view>
+         <view class="btn loading" wx:else>{{ num }}s后重发</view>
+      </view>
+    </view>
+    <view class="btn-wrap">
+      <button class="confirm button" bindtap="bindSubmitForm">登录</button>
+    </view>
+  </view>
+</view>

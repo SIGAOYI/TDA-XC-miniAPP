@@ -1,0 +1,99 @@
+/* chooseTime.wxss */
+
+.chooseTime .wrap {
+  padding-top: 80rpx;
+}
+
+.chooseTime .wrap .choose-time-title {
+  box-sizing: border-box;
+  margin-top: 20rpx;
+  padding-left: 20rpx;
+  width: 100%;
+  color: #999;
+  font-size: 32rpx;
+}
+
+.chooseTime .wrap .set-date-box {
+  margin-top: 20rpx;
+  background-color: #fff;
+}
+
+.chooseTime .wrap .set-date-box {
+  margin-top: 20rpx;
+  background-color: #fff;
+}
+
+.chooseTime .wrap .set-date-box .item-set {
+  display: flex;
+  height: 100rpx;
+}
+
+.chooseTime .wrap .set-date-box .setdate {
+  border-bottom: 1rpx solid #dfdfdf;
+}
+
+.chooseTime .wrap .set-date-box .title {
+  width: 200rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 30rpx;
+}
+
+.chooseTime .wrap .set-date-box .picker {
+  flex: 1;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 30rpx;
+}
+
+.chooseTime .wrap .set-date-box .picker .picker-val {
+  color: #fc9153;
+}
+
+.chooseTime .wrap .btn-wrap {
+  margin-top: 30rpx;
+}
+
+.chooseTime .wrap .btn-wrap button {
+  margin-top: 30rpx;
+  color: #fff;
+}
+
+.chooseTime .wrap .btn-wrap .confirm {
+  background-color: #4c4b5c;
+}
+
+.chooseTime .wrap .btn-wrap .cancel {
+  background-color: #b0bec5;
+}
+
+.icon-item {
+  height: 50rpx;
+  width: 80%;
+  margin-left:40%;
+  margin-top: 35rpx;
+  /*background-color: red;*/
+  vertical-align: middle;
+}
+
+.icon-item .icon-info {
+  line-height: 50rpx;
+
+}
+
+.icon-item .icon-infos {
+  line-height: 50rpx;
+}
+
+.icon-item .icon {
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-top: 11rpx;
+}
+
+.icon-item .icon-text {
+  font-size: 23rpx;
+  color: #B0BEC5;
+  line-height: 50rpx;
+}

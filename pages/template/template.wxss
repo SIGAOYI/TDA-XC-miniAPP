@@ -1,0 +1,120 @@
+/* template.wxss */
+
+.coupon-list .icon-item {
+  height: 230rpx;
+  width: 90%;
+  margin-left:5%;
+  margin-top: 35rpx;
+  border-radius:10rpx;
+  /*background-color: white;*/
+}
+
+.userinfo {
+  border-radius:10rpx;
+  flex: 1;
+  text-align:center;
+  /*background-color: #efeff4;*/
+}
+
+.userinfo-avatar {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  /*background-color: green;*/
+}
+
+.userinfo-nickname {
+  /*background-color: white;*/
+  font-size: 30rpx;
+  /*color: white;*/
+}
+
+
+
+
+
+.nickname {
+  background-color: pink;
+  height: 60rpx;
+}
+.user-text {
+  font-size: 30rpx;
+  margin-left: 5%;
+}
+.nickname-text {
+  margin-left: 20%;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  color:blue;
+}
+
+.item{
+  height: 300rpx;
+  margin-top: 30rpx;
+  background-color: white;
+}
+
+
+
+
+.coupon-list .icon-item .icon-info {
+  line-height: 50rpx;
+  margin-left: 42%;
+}
+
+.coupon-list .icon-item .icon-infos {
+  /*margin-left: 5%;*/
+  /*width: 100%;*/
+  line-height: 50rpx;
+}
+.coupon-list .icon-item .money-infos {
+  margin-left: 5%;
+  width: 200rpx;
+  line-height: 50rpx;
+}
+
+.coupon-list .icon-item .icon {
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-top: 10rpx;
+}
+
+.coupon-list .icon-item .money-text {
+  font-size: 23rpx;
+  color: #B0BEC5;
+  line-height: 50rpx;
+}
+
+.coupon-list .icon-item .icon-text {
+  font-size: 23rpx;
+  color: #B0BEC5;
+  line-height: 50rpx;
+}
+
+.coupon-list .icon-item .money{
+  margin-top: 10%;
+  margin-left: 5%;
+  width: 100%;
+}
+.coupon-list .icon-item .money-num {
+  height: 150rpx;
+  width: 200rpx;
+  margin-left: 30rpx;
+  font-size: 120rpx;
+  width: 100%;
+  line-height: 50rpx;
+  /*color:#FF8C19;*/
+}
+.coupon-list .icon-item .money-tag {
+  margin-top: 2%;
+  margin-left: 5%;
+}
+
+.line {
+  border-bottom: 1px solid #dfdfdf;
+  text-align: center;
+}
+
+.button {
+  margin-top: 40rpx;
+}

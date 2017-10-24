@@ -1,0 +1,126 @@
+<!--driverIndex.wxml-->
+<view class="driver-index">
+  <view class="top-list">
+    <view class="item-content cash-order">
+      <text>今天洗车订单
+        {{ todayXCAll }} 单
+      </text>
+    </view>
+    <view class="item-content">
+      <text>今天公估订单
+        {{ todayGGAll }} 单
+      </text>
+    </view>
+  </view>
+  <view class="order-list cash-list">
+    <view class="item-title">
+      <view bindtap="switchTab" class="{{ tabType ? 'cash-title list-title' : 'cash-title list-title dark'}}">当前洗车订单</view>
+      <view class="list-title">|</view>
+      <view bindtap="switchTab" class="{{ !tabType ? 'other-title list-title' : 'other-title list-title dark'}}">当前公估订单</view>
+      <view class="list-detail">
+        <view class="btn" bindtap="bindHistoryOrder">
+          查看当前列表历史 >>
+        </view>
+      </view>
+    </view>
+    <view class="item-content" hidden="{{ !tabType }}">
+      <view class="list-item" wx:for="{{ xcList }}" wx:key="orderNo">
+        <view class="item-header">
+          <view class="order-time">下单时间:{{ item.ct }}</view>
+          <view class="order-status">
+            {{ status[item.status] }}
+          </view>
+        </view>
+        <view class="item-info" bindtap="bindCheckDetails" data-no="{{ index }}" data-type="0">
+          <view class="info-item">
+            <view class="point-box">
+              <view class="point point-blue"></view>
+            </view>
+            <view class="text">
+              {{ item.plate }}
+            </view>
+          </view>
+          <view class="info-item">
+            <view class="point-box">
+              <view class="point point-yellow"></view>
+            </view>
+            <view class="text">
+              {{ item.addr}}  {{ item.remark }}
+            </view>
+          </view>
+          <view class="info-item">
+            <view class="point-box">
+              <view class="point point-red"></view>
+            </view>
+            <view class="text">
+              {{ item.st }} - {{ item.et }}
+            </view>
+          </view>
+        </view>
+        <view class="item-footer">
+          <view class="eval">
+            <view class="btn" catchtap="bindCashCar" hidden="{{ item.status !== 3 }}" data-no="{{item.orderNo}}" data-type="0">开始洗车</view>
+            <view class="btn" catchtap="bindCashCar" hidden="{{ item.status !== 4 }}" data-no="{{item.orderNo}}" data-type="1">洗车完成</view>
+          </view>
+        </view>
+      </view>
+      <view class="bg-icon" hidden="{{(xcList !== null)}}"></view>
+    </view>
+    <view class="item-content" hidden="{{ tabType }}">
+      <view class="list-item" wx:for="{{ ggList }}" wx:key="orderNo">
+        <view class="item-header">
+          <view class="order-time">下单时间:{{ item.ct }}</view>
+          <view class="order-status">
+            {{ status[item.status] }}
+          </view>
+        </view>
+        <view class="item-info" bindtap="bindCheckDetails" data-no="{{ index }}" data-type="1">
+          <view class="info-item">
+            <view class="point-box">
+              <view class="point point-blue"></view>
+            </view>
+            <view class="text">
+              {{ item.plate }}
+            </view>
+          </view>
+          <view class="info-item">
+            <view class="point-box">
+              <view class="point point-yellow"></view>
+            </view>
+            <view class="text">
+              {{ item.addr }}  {{ item.remark }}
+            </view>
+          </view>
+          <view class="info-item">
+            <view class="point-box">
+              <view class="point point-red"></view>
+            </view>
+            <view class="text">
+              {{ item.st }} - {{ item.et }}
+            </view>
+          </view>
+        </view>
+        <view class="item-footer">
+          <view class="eval">
+            <view class="btn" catchtap="bindCashCar" data-no="{{item.orderNo}}" data-type="2">完成公估</view>
+          </view>
+        </view>
+      </view>
+      <view class="bg-icon" hidden="{{(ggList !== null)}}"></view>
+    </view>
+  </view>
+  <view class="btn-module">
+    <view class="small-btn item-btn snap-order" bindtap="bindSnap">
+      <image src="../../lib/img/icon/icon-snap.png" mode="aspectFit"></image>
+    </view>
+    <view class="big-btn item-btn work-start" hidden="{{ driverStatus }}" bindtap="bindWorkStatus">
+       出车
+    </view>
+    <view class="big-btn item-btn" hidden="{{ !driverStatus }}" bindlongtap="bindWorkStatus">
+       收车
+    </view>
+    <view class="small-btn item-btn kf" bindtap="bindCallKfPhone">
+      <image src="../../lib/img/icon/icon-kf2.png" mode="aspectFit"></image>
+    </view>
+  </view>
+</view>

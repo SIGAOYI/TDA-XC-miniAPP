@@ -1,0 +1,68 @@
+<!--orderDetails.wxml-->
+<view class="container orderDetails">
+  <view class="wrap">
+    <text class="title">订单详情</text>
+    <view class="info-box">
+      <view class="info-box-item last-one">
+        <view class="name">订单金额</view>
+        <view class="info-item">
+          {{ info.amount/100 }}元
+        </view>
+      </view>
+    </view>
+    <view class="info-box">
+      <view class="info-box-item">
+        <view class="name">地址</view>
+        <view class="info-item addr">
+          {{ info.addr }}
+        </view>
+      </view>
+      <view class="info-box-item">
+        <view class="name">地址备注</view>
+        <view class="info-item remark">
+          {{ info.remark }}
+        </view>
+      </view>
+      <view class="info-box-item last-one" bindtap="bindCheckAddr">
+        <view class="name">具体地址</view>
+        <view  class="info-item check-addr strong-text">
+          点击查看
+        </view>
+      </view>
+    </view>
+    <view class="info-box">
+      <view class="info-box-item last-one">
+        <view class="name">预约时间</view>
+        <view class="info-item strong-text">
+          {{ info.ct }} - {{ info.st }}
+        </view>
+      </view>
+    </view>
+    <view class="info-box">
+      <view class="info-box-item">
+        <view class="name">车牌号</view>
+        <view class="info-item">
+          {{ info.car.plate }}
+        </view>
+      </view>
+      <view class="info-box-item">
+        <view class="name">车辆颜色</view>
+        <view class="info-item">
+          {{ info.car.color }}
+        </view>
+      </view>
+      <view class="info-box-item">
+        <view class="name">姓名</view>
+        <view class="info-item">
+          {{ info.car.linkman }}
+        </view>
+      </view>
+      <view class="info-box-item last-one">
+        <view class="name">电话</view>
+        <view class="info-item  strong-text">
+          {{ info.car.phone }}
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

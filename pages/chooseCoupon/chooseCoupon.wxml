@@ -1,0 +1,45 @@
+<!--orderList.wxml-->
+<view class="container coupon-list">
+  <view class="wrap" wx:if="{{showSel}}">
+    <view class="list-item">
+      <view class="stauts"><text class="stauts-text">{{ couponText }}</text></view>
+      <view class="button-item">
+        <view class="button-img" data-name="{{status}}" bindtap="bindInfoChange"><image class="imgs" src="../../lib/img/icon/{{ chooseImg }}"></image></view>
+        <!-- <button bindtap="bindInfoChange" plain="true" class="my-button"><image class="imgs" src="../../lib/img/icon/{{ chooseImg }}"></image></button> -->
+      </view>
+    </view>
+  </view>
+  <view class="icon-item allrow" bindtap="bindRouterTo" data-routername = 'qa'>
+    <view class="icon-info">
+      <icon class="icon" type="info_circle" size="15" color="#B0BEC5"/>
+    </view>
+    <view class="icon-infos">
+      <text class="icon-text">常见问题</text>
+    </view>
+  </view>
+  <view class="list">
+    <view wx:if="{{ couponArr.length >0 }}">
+      <view class="coupon" wx:for="{{ couponArr }}" wx:for-item="item" wx:key="{{item.id}}" id="{{item.id}}" bindtap="bindCoupon">
+        <image class="coupon-img" src="../../lib/img/icon/coupon.png"></image>
+        <text class="coupon-name">{{ item.coupon.name }}</text>
+        <view class="coupon-icon">
+          <text class="coupon-tag">¥</text>
+          <text class="coupon-money"> {{ item.coupon.money }}</text>
+        </view>
+        <text class="coupon-time">有效期至 {{ item.coupon.indate }}</text>
+        <text class="coupon-limit">{{ item.coupon.tag }}</text>
+      </view>
+    </view>
+    <view class="bg-view" wx:else>
+      <view class="coupon-no">
+        <text>您还暂时没有优惠券</text>
+      </view>
+<!--       <view class="coupon-share">
+        <button bindtap="bindRouterTo" data-routername = 'shareqr' size="default" ><text style="">分享有礼</text></button>
+      </view> -->
+      <view class="bg-bg">
+        <image class="coupon-img" src="../../lib/img/icon/bg-all.png"></image>
+      </view>
+    </view>
+  </view>
+</view>

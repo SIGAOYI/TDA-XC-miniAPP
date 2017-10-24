@@ -1,0 +1,63 @@
+/* qa.wxss */
+
+.qa .wrap {
+  padding-top: 40rpx;
+}
+
+.qa .wrap .list-item {
+  margin-top: 20rpx;
+  padding: 20rpx 20rpx 0;
+  background-color: #fff;
+  box-shadow: 0rpx 2rpx 1rpx 3rpx #dfdfdf;
+}
+
+.qa .wrap .list-item .item-header {
+  display: flex;
+  height: 80rpx;
+  border-bottom: 1px solid #dfdfdf;
+  color: #555;
+}
+
+.qa .wrap .list-item .item-header .question {
+  width: 80rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 34rpx;
+  text-align: center;
+}
+
+.qa .wrap .list-item .item-header .question-content {
+  flex: 1;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+}
+
+.qa .wrap .list-item .item-info {
+  padding: 20rpx 0;
+}
+
+.qa .wrap .list-item .item-info .info-item {
+  display: flex;
+  min-height: 80rpx;
+}
+
+.qa .wrap .list-item .item-info .info-item .answer {
+  width: 80rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 34rpx;
+  text-align: center;
+}
+
+.qa .wrap .list-item .item-info .info-item .answer-text {
+  flex: 1;
+  box-sizing: border-box;
+  padding-right: 10rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+}
+
+.qa .wrap .list-item .item-info .info-item .answer-text .phone {
+  text-decoration: underline;
+}

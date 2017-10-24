@@ -1,0 +1,83 @@
+/* orderDetails.wxss */
+
+.orderDetails {
+  padding-top: 40rpx;
+}
+
+.orderDetails .wrap {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.orderDetails .title {
+  box-sizing: border-box;
+  display: block;
+  padding: 0 50rpx;
+  width: 100%;
+  line-height: 40rpx;
+  color: #ccc;
+  font-size: 28rpx;
+}
+
+.orderDetails .info-box {
+  width: 100%;
+  padding: 0 20rpx;
+  margin-top: 20rpx;
+  background-color: #fff;
+}
+
+.orderDetails .info-box .info-box-item {
+  display: flex;
+  width: 100%;
+  border-bottom: 1rpx solid #dfdfdf;
+}
+
+.orderDetails .info-box .last-one {
+  border-bottom: none !important;
+}
+
+.orderDetails .info-box .info-box-item .name {
+  box-sizing: border-box;
+  padding-left: 30rpx;
+  width: 160rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+}
+
+.orderDetails .info-box .info-box-item .info-item {
+  flex: 1;
+  box-sizing: border-box;
+  padding: 0 20rpx 0 40rpx;
+  overflow-x: hidden; 
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+}
+
+.orderDetails .info-box .info-box-item .addr {
+  line-height: 60rpx;
+  height: 120rpx;
+}
+
+.orderDetails .info-box .info-box-item .remark {
+  line-height: 60rpx;
+  height: 180rpx;
+}
+
+.orderDetails .info-box .info-box-item .check-addr {
+  text-decoration: underline;
+}
+
+.orderDetails .btn-wrap {
+  margin-top: 30rpx;
+}
+
+.orderDetails .btn-wrap button {
+  margin-top: 30rpx;
+  color: #fff;
+}
+
+.orderDetails .btn-wrap .confirm {
+  background-color: #4c4b5c;
+}

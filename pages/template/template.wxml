@@ -1,0 +1,69 @@
+<!-- 充值 -->
+<template name="type1">
+  <view class="container coupon-list">
+    <view class="icon-item">
+      <view class="userinfo" >
+        <view><image class="userinfo-avatar"  src="{{ wxUserInfo.avatarUrl }}" background-size="cover"></image></view>
+        <view><text class="userinfo-nickname">{{ wxUserInfo.nickName }}</text></view>
+      </view>
+      <!-- <view class="line"></view> -->
+      <form bindsubmit="formBindsubmit" bindreset="formReset">
+        <view class="item">
+          <view class="allrow">
+            <view class="money-infos">
+              <text class="money-text">{{ type1 }}金额 (元)</text>
+            </view>
+            <view class="icon-info">
+              <icon class="icon" type="info_circle" size="15" color="#B0BEC5"/>
+            </view>
+            <view class="icon-infos"  bindtap="bindRouterTo" data-routername = 'qa'>
+              <text class="icon-text">常见问题</text>
+            </view>
+          </view>
+          <view class="money allrow">
+            <text>￥</text>
+            <input type="digit" name="money" class="money-num" auto-focus="true"   />
+          </view>
+        </view>
+        <view class="button">
+          <button type="primary" class="loginBtn" formType="submit">{{ type1 }}</button>
+        </view>
+      </form>
+    </view>
+  </view>
+</template>
+
+<!-- 提现 -->
+<template name="type2">
+  <view class="container coupon-list">
+    <view class="icon-item">
+      <view class="userinfo" >
+        <view><image class="userinfo-avatar"  src="{{ wxUserInfo.avatarUrl }}" background-size="cover"></image></view>
+        <view><text class="userinfo-nickname">{{ wxUserInfo.nickName }}</text></view>
+      </view>
+      <!-- <view class="line"></view> -->
+      <form bindsubmit="formBindsubmit" bindreset="formReset">
+        <view class="item">
+          <view class="allrow">
+            <view class="money-infos">
+              <text class="money-text">{{ type2 }}金额 (元)</text>
+            </view>
+            <view class="icon-info">
+              <icon class="icon" type="info_circle" size="15" color="#B0BEC5"/>
+            </view>
+            <view class="icon-infos"  bindtap="bindRouterTo" data-routername = 'qa'>
+              <text class="icon-text">常见问题</text>
+            </view>
+          </view>
+          <view class="money allrow">
+            <text>￥</text>
+            <input type="digit" name="money" class="money-num" auto-focus="true"   />
+          </view>
+        </view>
+        <view class="button">
+          <button type="primary" class="loginBtn" formType="submit">{{ type2 }}</button>
+        </view>
+      </form>
+    </view>
+  </view>
+</template>

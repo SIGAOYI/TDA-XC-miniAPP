@@ -1,0 +1,150 @@
+/* addCar.wxss */
+
+.add-car {
+  padding-top: 60rpx;
+}
+
+.add-car .wrap {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.add-car .title {
+  box-sizing: border-box;
+  display: block;
+  padding: 0 50rpx;
+  width: 100%;
+  line-height: 60rpx;
+  color: #ccc;
+  font-size: 32rpx;
+}
+.redalert{
+  color: red;
+  font-size: 26rpx;
+  line-height: 75rpx;
+  padding-left: 50rpx;
+}
+.add-car .form-box {
+  padding: 10px 0;
+  width: 100%;
+  padding: 0 20rpx;
+  background-color: #fff;
+}
+
+.add-car .form-box .form-box-item {
+  display: flex;
+  width: 100%;
+  height: 100rpx;
+  border-bottom: 1rpx solid #dfdfdf;
+}
+
+.add-car .form-box .last-one {
+  border-bottom: none !important;
+}
+
+.add-car .form-box .form-box-item .name {
+  box-sizing: border-box;
+  padding-left: 30rpx;
+  width: 160rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 32rpx;
+}
+
+.add-car .form-box .form-box-item  .sex {
+  border-radius:5rpx;
+  margin-top: 35rpx;
+  margin-left: 10rpx;
+  box-sizing: border-box;
+  width: 60rpx;
+  height: 38rpx;
+  font-size: 23rpx;
+  /*background-color: #FF8C19;*/
+  /*background-color: #B0BEC5;*/
+  padding-left: 10rpx;
+}
+
+.add-car .form-box .form-box-item .sex-text{
+  padding-top: 3rpx;
+  line-height: 45rpx;
+  color:white;
+  font-size: 23rpx;
+  text-align:center;
+  /*margin-left: 8rpx;*/
+  margin-top: 8rpx;
+}
+
+.add-car .form-box .form-box-item .input-item {
+  flex: 1;
+  height: 100rpx;
+}
+
+.add-car .form-box .form-box-item .radio-item .radio-group {
+  margin-top: 17rpx;
+}
+
+.add-car .form-box .form-box-item .radio-item .radio {
+  margin-right: 10rpx;
+  font-size: 32rpx;
+}
+
+.add-car .form-box .form-box-item .input-item input {
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 32rpx;
+}
+
+.add-car .form-box .form-box-item .enter-name input {
+  border-bottom: 1rpx solid #dfdfdf;
+}
+
+.add-car .form-box .form-box-item .addr {
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 32rpx;
+  overflow: hidden;
+}
+
+.add-car .add-usual-addr {
+  display: flex;
+  height: 80rpx;
+}
+
+.add-car .add-usual-addr .item-title {
+  box-sizing: border-box;
+  padding: 0 50rpx;
+  flex: 1;
+  line-height: 80rpx;
+  color: #ccc;
+  font-size: 32rpx;
+}
+
+.add-car .add-usual-addr .item-icon {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.add-car .add-usual-addr .item-icon .add-icon {
+  margin-top: 20rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.add-car .btn-wrap {
+  margin-top: 30rpx;
+}
+
+.add-car .btn-wrap button {
+  margin-top: 30rpx;
+  color: #fff;
+}
+
+.add-car .btn-wrap .confirm {
+  background-color: #4c4b5c;
+}
+
+.add-car .btn-wrap .cancel {
+  background-color: #b0bec5;
+}

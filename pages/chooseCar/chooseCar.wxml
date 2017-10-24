@@ -1,0 +1,20 @@
+<view class="container choose-car">
+  <text class="title">您的车辆信息列表</text>
+  <view class="cars-list">
+      <view class="cars-list-item" wx:for="{{ appUserInfo }}" wx:key="item.id" data-index="{{ index }}" bindtap="chooseCarInfo">
+        <view class="user-info">
+          <view class="car-num">{{ item.plate }}<text class="small">{{ item.linkman }} {{ (item.gender) ? '先生' : '女士' }} {{ item.phone }}</text></view>
+          <view class="addr item-info">
+            {{ item.usualaddr.addr }}
+          </view>
+        </view>
+        <view class="edit-item">
+          <view class="edit-btn" catchtap="bindEditInfo" data-index="{{ index }}">编辑</view>
+        </view>
+      </view>
+  </view>
+  <view class="add-car-btn" bindtap="bindAddInfo">
+    添加一辆车
+  </view>
+  <view class="{{ (appUserInfo.length === 0) ? 'bg-icon' : 'bg-icon hide' }}" bindtap="bindAddInfo"></view>
+</view>

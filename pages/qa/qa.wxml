@@ -1,0 +1,77 @@
+<!--qa.wxml-->
+<view class="container qa">
+  <view class="wrap">
+    <view class="list">
+      <view class="list-item">
+        <view class="item-header">
+          <view class="question strong-text">Q:</view>
+          <view class="question-content">如何联系客服人员？</view>
+        </view>
+        <view class="item-info last-one">
+          <view class="info-item">
+            <view class="answer strong-text">
+              A:
+            </view>
+            <view class="answer-text" bindtap="bindCallKfPhone">
+              <text>客服电话：<text class="strong-text phone">180-4623-3989</text> 或 
+              公众号搜索：<text class="strong-text">天地安</text>
+              </text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="list-item">
+        <view class="item-header">
+          <view class="question strong-text">Q:</view>
+          <view class="question-content">可以预约什么时候的洗车服务？</view>
+        </view>
+        <view class="item-info last-one">
+          <view class="info-item">
+            <view class="answer strong-text">
+              A:
+            </view>
+            <view class="answer-text">
+              <text>您可以<text class="strong-text">预约2小时之后到7天之内</text>完成的洗车服务；比如您可以预约今天18:00开始洗车，19:00完成洗车；您也可以预约今天22:00开始洗车，明天08:00完成洗车，只需详细标明车辆停放位置，我们会在夜间进行上门洗车。
+              </text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="list-item">
+        <view class="item-header">
+          <view class="question strong-text">Q:</view>
+          <view class="question-content">是否支持现金付款？</view>
+        </view>
+        <view class="item-info last-one">
+          <view class="info-item">
+            <view class="answer strong-text">
+              A:
+            </view>
+            <view class="answer-text">
+              <text>目前只支持在线预约，微信支付，不支持现金结算。
+              </text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="list-item">
+        <view class="item-header">
+          <view class="question strong-text">Q:</view>
+          <view class="question-content">师傅接单了却没上门？</view>
+        </view>
+        <view class="item-info last-one">
+          <view class="info-item">
+            <view class="answer strong-text">
+              A:
+            </view>
+            <view class="answer-text">
+              <text>您可以拨打客服电话，也可以在公众号“天地安”留言进行投诉，投诉时提供您的绑定手机号及订单信息即可。
+              </text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
